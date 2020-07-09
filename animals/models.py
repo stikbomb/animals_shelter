@@ -8,7 +8,7 @@ class Animal(models.Model):
     entry_date = models.DateField('Дата поступления', blank=True)
     weight = models.FloatField('Вес', blank=True)
     height = models.FloatField('Рост', blank=True)
-    special_signs = models.TextField()
+    special_signs = models.TextField('Особые приметы', blank=True)
 
     def __str__(self):
         return f"{self.kind} по кличке {self.name}"
