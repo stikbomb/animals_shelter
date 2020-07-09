@@ -1,7 +1,8 @@
 from django.db import models
+from softdelete.models import SoftDeleteObject
 
 
-class Animal(models.Model):
+class Animal(SoftDeleteObject, models.Model):
     kind = models.CharField('Вид', max_length=200)
     breed = models.CharField('Порода', max_length=200, blank=True, null=True)
     name = models.CharField('Имя', max_length=200)
