@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'animals'
+    'animals',
+    'adminsortable2',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

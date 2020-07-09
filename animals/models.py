@@ -1,7 +1,5 @@
 from django.db import models
 
-from tinymce.models import HTMLField
-
 
 class Animal(models.Model):
     kind = models.CharField('Вид', max_length=200)
@@ -18,7 +16,7 @@ class Animal(models.Model):
 
 class Image(models.Model):
     animal = models.ForeignKey(Animal, on_delete=models.SET_NULL, blank=True, null=True,
-                              related_name='images', verbose_name='Животное')
+                               related_name='images', verbose_name='Животное')
     image = models.ImageField('Картинка')
     position = models.PositiveIntegerField(default=0, blank=False, null=False)
 
