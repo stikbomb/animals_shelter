@@ -3,11 +3,11 @@ from django.db import models
 
 class Animal(models.Model):
     kind = models.CharField('Вид', max_length=200)
-    breed = models.CharField('Порода', max_length=200, blank=True)
+    breed = models.CharField('Порода', max_length=200, blank=True, null=True)
     name = models.CharField('Имя', max_length=200)
-    entry_date = models.DateField('Дата поступления', blank=True)
-    weight = models.FloatField('Вес', blank=True)
-    height = models.FloatField('Рост', blank=True)
+    entry_date = models.DateField('Дата поступления', blank=True, null=True)
+    weight = models.FloatField('Вес', blank=True, null=True)
+    height = models.FloatField('Рост', blank=True, null=True)
     special_signs = models.TextField('Особые приметы', blank=True)
 
     def __str__(self):
